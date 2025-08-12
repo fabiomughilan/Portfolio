@@ -317,19 +317,6 @@ export const projects = [
     github: "https://github.com/fabiomughilan/SonicAI",
   },
   {
-    id: 2,
-    title: "Workverse",
-    date: "Nov 2024",
-    description:
-      "Developed a 2D virtual office using Phaser3 and React.js with Web3 features like Privy and Push Protocol.Integrated Redux and Tiled for gamified collaboration and map editing.Won Ethglobal Bangkok with the bounty of $2000",
-    image:
-      "https://github.com/user-attachments/assets/89af8ce2-b743-4945-92f4-fe63e7df9a19",
-    tags: ["TypeScript","React", "Redux", "Node.js", "Push Protocol","Github"],
-    category: ["web app","blockchain"],
-    github: "https://github.com/fabiomughilan/workverse",
-    webapp: "https://github.com/fabiomughilan/workverse",
-  },
-  {
     id: 3,
     title: "Health Mind Chat Bot",
     date: "Dec 2021 - Apr 2022",
@@ -342,6 +329,20 @@ export const projects = [
     github: "https://github.com/fabiomughilan/Chatbot",
     webapp: "https://fabiomughilan-chatbot-chat-agentschat-ui-cdgxwc.streamlit.app/",
   },
+  {
+    id: 2,
+    title: "Workverse",
+    date: "Nov 2024",
+    description:
+      "Developed a 2D virtual office using Phaser3 and React.js with Web3 features like Privy and Push Protocol.Integrated Redux and Tiled for gamified collaboration and map editing.Won Ethglobal Bangkok with the bounty of $2000",
+    image:
+      "https://github.com/user-attachments/assets/89af8ce2-b743-4945-92f4-fe63e7df9a19",
+    tags: ["TypeScript","React", "Redux", "Node.js", "Push Protocol","Github"],
+    category: ["web app","blockchain"],
+    github: "https://github.com/fabiomughilan/workverse",
+    webapp: "https://github.com/fabiomughilan/workverse",
+  },
+  
   {
     id: 10,
     title: "Fireworks Ecommerce Website",
