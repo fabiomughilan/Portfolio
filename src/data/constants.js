@@ -252,7 +252,7 @@ export const education = [
     id: 2,
     img: "https://upload.wikimedia.org/wikipedia/en/f/f0/The_Oxford_School%2C_Trivandrum_logo.png",
     school: "The Oxford School, Trivandrum",
-    date: "Apr 2017 - Apr 2019",
+    date: "Jun 2019 - Apr 2020",
     grade: "84%",
     desc: "I completed my class 10 education at The Oxford School, Trivandrum, where I studied Science with Computer Application.",
     degree: "CBSE(X), Science with Computer",
@@ -263,7 +263,7 @@ export const projects = [
   {
     id: 9,
     title: "0xSwap",
-    date: "Jun 2023 - Jul 2023",
+    date: "July - August 2025",
     description:
       "0xSwap is a gamified DeFi platform where cross-chain swaps become magical, tradable NFTs.",
     image:
@@ -287,11 +287,11 @@ export const projects = [
   {
     id: 0,
     title: "Luffy Dex",
-    date: "Apr 2023 - May 2023",
+    date: "Jun 2025",
     description:
       "Developed a decentralized exchange (DEX) platform that allows users to trade cryptocurrencies securely and efficiently. Implemented smart contracts using Solidity and integrated with the Ethereum blockchain. Designed a user-friendly interface with React JS and ensured seamless communication between the front end and smart contracts using Ethers.js.",
     image:
-      "https://user-images.githubusercontent.com/64485885/234602896-a1bd8bcc-b72b-4821-83d6-8ad885bf435e.png",
+      "https://github.com/user-attachments/assets/9d2aca9b-98a6-4e8c-964f-132abbfde538",
     tags: ["React Js", "1inch Fusion+ API", "Node Js", "Ethers.js", "WalletConnect","JavaScript"],
     category: ["web app", "blockchain"],
     github: "https://github.com/fabiomughilan/Luffy-DEX",
@@ -300,31 +300,30 @@ export const projects = [
   {
     id: 1,
     title: "Sonic AI",
-    date: "Oct 2022 - Present",
+    date: "Feb 2025",
     description:
-      "Designed and developed the Sonic AI project, a project management app that helps users and teams stay organized and on track. Implemented key features such as task tracking, team collaboration, and time tracking to improve productivity and project outcomes and also invite team/project members. The plan is to add a community of users where they can find developers and other team members and chat system implementation.",
+      "SonicAi is a platform featuring multiple AI agents to help users transact tokens on Sonic Ecosystem The main aim of the platform is to provide users with profitable opportunities through various DeFi operations such as swapping tokens, get balance, deploy NFTs, approving ERC20 tokens, and more.The platform leverages AI agents built using LangChain and LangGraph to analyze market data, execute trades, and automate tasks without unnecessary user intervention. Agents collaborate autonomously to complete tasks efficiently, ensuring seamless execution while keeping technical complexities hidden from the user.",
     image:
       "https://user-images.githubusercontent.com/64485885/234916413-96296f13-fe4b-4cc4-b215-e72bd7c27928.png",
     tags: [
-      "React Js",
-      "MongoDb",
-      "Node Js",
-      "Express Js",
-      "Redux",
-      "NodeMailer",
+      "Python",
+      "LLM's",
+      "Zerepy",
+      "Sonic ",
+      "DeFi",
+      "AI agents",
     ],
-    category: ["web app","AI"],
-    github: "https://github.com/rishavchanda/Project-Management-App",
-    webapp: "https://vexa-app.netlify.app/",
+    category: ["AI"],
+    github: "https://github.com/fabiomughilan/SonicAI",
   },
   {
     id: 2,
     title: "Workverse",
-    date: "Jan 2023 - Mar 2023",
+    date: "Nov 2024",
     description:
       "Developed a 2D virtual office using Phaser3 and React.js with Web3 features like Privy and Push Protocol.Integrated Redux and Tiled for gamified collaboration and map editing.Won Ethglobal Bangkok with the bounty of $2000",
     image:
-      "https://github.com/rishavchanda/Brain-Tumor-Detection/raw/main/Readme_resource/Image2.png",
+      "https://github.com/user-attachments/assets/89af8ce2-b743-4945-92f4-fe63e7df9a19",
     tags: ["TypeScript","React", "Redux", "Node.js", "Push Protocol","Github"],
     category: ["web app","blockchain"],
     github: "https://github.com/fabiomughilan/workverse",
@@ -337,7 +336,7 @@ export const projects = [
     description:
       "AI chatbot that provides personalized support in mental health and dietary advice. It uses natural language processing to understand user queries and provide relevant responses. The chatbot is designed to be user-friendly and accessible, making it easy for users to get the help they need.Powered by a multi-agent architecture using CrewAI, it leverages large language models (LLMs) via Together.ai,along with semantic search using ChromaDB.",
     image:
-      "https://camo.githubusercontent.com/fbf405040ae86b5d4a40f24e4ac034982cb8c0e2d850560ba64527997b258be8/68747470733a2f2f666972656261736573746f726167652e676f6f676c65617069732e636f6d2f76302f622f6c6f67696e2d65613565322e61707073706f742e636f6d2f6f2f4255434b4f49442532302831292e706e673f616c743d6d6564696126746f6b656e3d32653735376235372d323964372d346263612d613562322d653164346538313432373435",
+      "https://private-user-images.githubusercontent.com/64077520/463561608-bf43935d-4326-4a9a-bbf5-ed1784235a5a.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTQ5ODA0NDEsIm5iZiI6MTc1NDk4MDE0MSwicGF0aCI6Ii82NDA3NzUyMC80NjM1NjE2MDgtYmY0MzkzNWQtNDMyNi00YTlhLWJiZjUtZWQxNzg0MjM1YTVhLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA4MTIlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwODEyVDA2MjkwMVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTI3MWJmOGEzNmMyMWUzNzBmM2M3ZjljNjEyYjk5MTZkZmUzMWY3OTNjZDE3OGUzNDIzOGE5ZDUzNDY2YmI5ZmMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.jKgpFrJvh9tlIGGrKBdA778VTbGqriG1BhXVmxheMMM",
     tags: ["Python", "Flask", "Mixtral", "FastAPI", "ChromaDB", "CrewAI", "TogetherAI"],
     category: ["web app","AI"],
     github: "https://github.com/fabiomughilan/Chatbot",
@@ -359,28 +358,26 @@ export const projects = [
   {
     id: 4,
     title: "Phishing URL Detection using Ensemble Method",
-    date: "Jul 2021",
+    date: "Jul 2023",
     description:
-      "A WhatsApp clone made with React JS, Firebase, and Material UI. It has Phone Authentication, Real-time Database. It has a chat room where users can chat with each other. It has a sidebar where users can see all the chat rooms and can create a new chat room. It has a login page where users can log in with their Google account.",
+      "This project focuses on detecting phishing URLs using machine learning, specifically an ensemble method that combines decision trees and takes a majority vote for classification. By analyzing features like domain name, URL length, keywords, and HTTP usage, the model can identify both known and unknown phishing attempts. Trained on a processed phishing URL dataset, the system achieves 87% accuracy, offering a reliable approach to phishing prevention and reducing the risk of attacks.",
     image:
       "https://firebasestorage.googleapis.com/v0/b/whatsapp-clone-rishav.appspot.com/o/Screenshot%20(151).png?alt=media&token=48391593-1ef0-4a8c-a92a-eb82bdf38e89",
-    tags: ["React Js", "Firebase", "Firestore", "Node JS"],
-    category: "web app",
-    github: "https://github.com/rishavchanda/Whatsapp-Clone-React-Js",
-    webapp: "https://whatsapp-clone-rishav.web.app",
+    tags: ["Python", "TensorFlow","Machine Learning","GoogleColab"],
+    category: "AI",
+    github: "https://github.com/fabiomughilan/Phishing-URL-Detection-using-Ensemble-method"
   },
   {
     id: 5,
     title: "GST Prediction using LightGBM",
-    date: "Jul 2021",
+    date: "Oct 2024",
     description:
-      "A WhatsApp clone made with React JS, Firebase, and Material UI. It has Phone Authentication, Real-time Database. It has a chat room where users can chat with each other. It has a sidebar where users can see all the chat rooms and can create a new chat room. It has a login page where users can log in with their Google account.",
+      "This project applies LightGBM to GST data classification, taking advantage of its speed, efficiency, and ability to handle missing values and imbalanced datasets without extensive preprocessing. After removing irrelevant metadata, the model was configured with GBDT boosting, 100 estimators, a 0.1 learning rate, automatic depth selection, and 80% subsampling for rows and features to enhance generalization. Trained using leaf-wise growth, LightGBM delivered strong performance, achieving 97.83% accuracy, 84.53% precision, 94.21% recall, 89.11% F1 score, 96.21% balanced accuracy, 0.0491 log loss, and an impressive 0.9949 AUC-ROC, demonstrating high accuracy and robustness in handling large datasets efficiently.",
     image:
-      "https://firebasestorage.googleapis.com/v0/b/whatsapp-clone-rishav.appspot.com/o/Screenshot%20(151).png?alt=media&token=48391593-1ef0-4a8c-a92a-eb82bdf38e89",
-    tags: ["React Js", "Firebase", "Firestore", "Node JS"],
-    category: "web app",
-    github: "https://github.com/rishavchanda/Whatsapp-Clone-React-Js",
-    webapp: "https://whatsapp-clone-rishav.web.app",
+      "https://github.com/user-attachments/assets/8c206814-d362-4c34-919e-b294ab7294f7",
+    tags: ["Python", "Machine Learning", "LightGBM"],
+    category: "AI",
+    github: "https://github.com/fabiomughilan/GST"
   }
 ];
 
