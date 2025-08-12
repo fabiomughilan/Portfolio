@@ -363,7 +363,7 @@ export const projects = [
     description:
       "This project focuses on detecting phishing URLs using machine learning, specifically an ensemble method that combines decision trees and takes a majority vote for classification. By analyzing features like domain name, URL length, keywords, and HTTP usage, the model can identify both known and unknown phishing attempts. Trained on a processed phishing URL dataset, the system achieves 87% accuracy, offering a reliable approach to phishing prevention and reducing the risk of attacks.",
     image:
-      "https://firebasestorage.googleapis.com/v0/b/whatsapp-clone-rishav.appspot.com/o/Screenshot%20(151).png?alt=media&token=48391593-1ef0-4a8c-a92a-eb82bdf38e89",
+      "https://github.com/user-attachments/assets/79da653e-de9f-40cc-8913-719c4c66d8bf",
     tags: ["Python", "TensorFlow","Machine Learning","GoogleColab"],
     category: "AI",
     github: "https://github.com/fabiomughilan/Phishing-URL-Detection-using-Ensemble-method"
