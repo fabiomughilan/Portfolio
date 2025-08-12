@@ -313,7 +313,7 @@ export const projects = [
       "DeFi",
       "AI agents",
     ],
-    category: ["AI"],
+    category: ["AI", "blockchain"],
     github: "https://github.com/fabiomughilan/SonicAI",
   },
   {
