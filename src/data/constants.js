@@ -124,7 +124,7 @@ export const skills = [
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBMw6_RdwKQ9bDFfnKDX1iwMl4bVJEvd9PP53XuIw&s",
       },
       {
-        name: "Android Studio",
+        name: "Web3.js",
         image:
           "https://developer.android.com/static/studio/images/new-studio-logo-1_1920.png",
       },
@@ -313,7 +313,7 @@ export const projects = [
       "Redux",
       "NodeMailer",
     ],
-    category: "web app",
+    category: ["web app","AI"],
     github: "https://github.com/rishavchanda/Project-Management-App",
     webapp: "https://vexa-app.netlify.app/",
   },
@@ -322,40 +322,26 @@ export const projects = [
     title: "Workverse",
     date: "Jan 2023 - Mar 2023",
     description:
-      "Preprocessed and augmented the dataset to improve model accuracy, trained the model, created API using model and Python, and used React web app for the project's front end. Achievements: Achieved an accuracy of 99.2% to accurately detect brain tumors from medical images.",
+      "Developed a 2D virtual office using Phaser3 and React.js with Web3 features like Privy and Push Protocol.Integrated Redux and Tiled for gamified collaboration and map editing.Won Ethglobal Bangkok with the bounty of $2000",
     image:
       "https://github.com/rishavchanda/Brain-Tumor-Detection/raw/main/Readme_resource/Image2.png",
-    tags: ["Python", "Keras", "TensorFlow", "VGG16", "Pickle", "React"],
-    category: "machine learning",
-    github: "https://github.com/rishavchanda/Brain-Tumor-Detection",
-    webapp: "https://brain-tumor.netlify.app/",
-    member: [
-      {
-        name: "Rishav Chanda",
-        img: "https://avatars.githubusercontent.com/u/64485885?v=4",
-        linkedin: "https://www.linkedin.com/in/rishav-chanda-b89a791b3/",
-        github: "https://github.com/rishavchanda/",
-      },
-      {
-        name: "Upasana Chaudhuri",
-        img: "https://avatars.githubusercontent.com/u/100614635?v=4",
-        linkedin: "https://www.linkedin.com/in/upasana-chaudhuri-2a2bb5231/",
-        github: "https://github.com/upasana0710",
-      },
-    ],
+    tags: ["TypeScript","React", "Redux", "Node.js", "Push Protocol","Github"],
+    category: ["web app","blockchain"],
+    github: "https://github.com/fabiomughilan/workverse",
+    webapp: "https://github.com/fabiomughilan/workverse",
   },
   {
     id: 3,
     title: "Health Mind Chat Bot",
     date: "Dec 2021 - Apr 2022",
     description:
-      "App Is Currently In Playstore 100+ Downloads. This Project proposes an “Expense Tracking App”. Keep track of your personal expenses and compare them to your monthly income with the budget planner. It has Google Drive Cloud API for Backup of User Room Database. Made with Kotlin in MVVM Architecture & Live Data.",
+      "AI chatbot that provides personalized support in mental health and dietary advice. It uses natural language processing to understand user queries and provide relevant responses. The chatbot is designed to be user-friendly and accessible, making it easy for users to get the help they need.Powered by a multi-agent architecture using CrewAI, it leverages large language models (LLMs) via Together.ai,along with semantic search using ChromaDB.",
     image:
       "https://camo.githubusercontent.com/fbf405040ae86b5d4a40f24e4ac034982cb8c0e2d850560ba64527997b258be8/68747470733a2f2f666972656261736573746f726167652e676f6f676c65617069732e636f6d2f76302f622f6c6f67696e2d65613565322e61707073706f742e636f6d2f6f2f4255434b4f49442532302831292e706e673f616c743d6d6564696126746f6b656e3d32653735376235372d323964372d346263612d613562322d653164346538313432373435",
-    tags: ["Kotlin", "MVVM", "Room Database", "Google Drive Cloud API"],
-    category: "android app",
-    github: "https://github.com/rishavchanda/Buckoid-Android-App",
-    webapp: "https://play.google.com/store/apps/details?id=com.rishav.buckoid",
+    tags: ["Python", "Flask", "Mixtral", "FastAPI", "ChromaDB", "CrewAI", "TogetherAI"],
+    category: ["web app","AI"],
+    github: "https://github.com/fabiomughilan/Chatbot",
+    webapp: "https://fabiomughilan-chatbot-chat-agentschat-ui-cdgxwc.streamlit.app/",
   },
   {
     id: 10,
