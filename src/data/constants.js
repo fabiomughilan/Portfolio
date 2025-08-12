@@ -323,7 +323,7 @@ export const projects = [
     description:
       "AI chatbot that provides personalized support in mental health and dietary advice. It uses natural language processing to understand user queries and provide relevant responses. The chatbot is designed to be user-friendly and accessible, making it easy for users to get the help they need.Powered by a multi-agent architecture using CrewAI, it leverages large language models (LLMs) via Together.ai,along with semantic search using ChromaDB.",
     image:
-      "https://private-user-images.githubusercontent.com/64077520/463561608-bf43935d-4326-4a9a-bbf5-ed1784235a5a.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTQ5ODA0NDEsIm5iZiI6MTc1NDk4MDE0MSwicGF0aCI6Ii82NDA3NzUyMC80NjM1NjE2MDgtYmY0MzkzNWQtNDMyNi00YTlhLWJiZjUtZWQxNzg0MjM1YTVhLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA4MTIlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwODEyVDA2MjkwMVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTI3MWJmOGEzNmMyMWUzNzBmM2M3ZjljNjEyYjk5MTZkZmUzMWY3OTNjZDE3OGUzNDIzOGE5ZDUzNDY2YmI5ZmMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.jKgpFrJvh9tlIGGrKBdA778VTbGqriG1BhXVmxheMMM",
+      "https://github.com/user-attachments/assets/bf43935d-4326-4a9a-bbf5-ed1784235a5a",
     tags: ["Python", "Flask", "Mixtral", "FastAPI", "ChromaDB", "CrewAI", "TogetherAI"],
     category: ["web app","AI"],
     github: "https://github.com/fabiomughilan/Chatbot",
