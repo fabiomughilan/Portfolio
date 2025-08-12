@@ -348,13 +348,13 @@ export const projects = [
     title: "Fireworks Ecommerce Website",
     date: "Jun 2023 - Jul 2023",
     description:
-      "A Job Finding App made with React Native, Axios. Users can search for any job coming from API and apply there.",
+      "Built a Fireworks Ecommerce Website including customer portal and seller portal using React, MongoDB, and Firebase.",
     image:
-      "https://user-images.githubusercontent.com/64485885/255237090-cf798a2c-1b41-4bb7-b904-b5353a1f08e8.png",
-    tags: ["React Native", "JavaScript", "Axios"],
-    category: "android app",
-    github: "https://github.com/rishavchanda/Job-finder-App",
-    webapp: "https://github.com/rishavchanda/Job-finder-App",
+      "https://github.com/user-attachments/assets/789c7aa6-59c1-4d02-a40b-f504e0a6f19e",
+    tags: ["React", "JavaScript", "Axios","MongoDB"],
+    category: "web app",
+    github: "https://github.com/fabiomughilan/Fireworks-Ecommerce",
+    webapp: "https://fireworksclient.netlify.app/",
   },
   {
     id: 4,
