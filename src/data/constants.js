@@ -186,12 +186,19 @@ export const experiences = [
     date: "Jan 2024 - Present",
     desc: "I have delivered end-to-end decentralized applications, including DeFi platforms, NFT marketplaces, and token smart contracts, integrating multi-chain support across Ethereum, Polygon, BSC, and Cosmos-based networks, developing and auditing Solidity contracts with features like slippage control, fee handling, and routing, while building scalable frontends using React/Next.js with ethers.js and wagmi for seamless wallet integrations.",
     skills: [
-      "MERN Stack",
-      "Ethereum",
-      "Polygon",
-      "IPFS",
-      "Solidity",
-    ],
+  "Solidity",
+  "Ethereum",
+  "Polygon",
+  "BSC",
+  "MERN Stack",
+  "React/Next.js",
+  "ethers.js",
+  "wagmi",
+  "IPFS",
+  "DeFi & NFT Development",
+  "Hardhat",
+  "Foundry"
+],
 
   },
   {
