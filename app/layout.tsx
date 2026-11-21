@@ -1,7 +1,29 @@
 import type { Metadata } from 'next'
+import { Manrope, Inter, IBM_Plex_Mono } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+
+const manrope = Manrope({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  variable: '--font-d',
+  display: 'swap',
+})
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  variable: '--font-b',
+  display: 'swap',
+})
+
+const ibmPlexMono = IBM_Plex_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  variable: '--font-m',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: {
@@ -24,7 +46,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${manrope.variable} ${inter.variable} ${ibmPlexMono.variable}`}>
       <body>
         <Header />
         <main>{children}</main>
