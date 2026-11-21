@@ -8,6 +8,10 @@ function StarIcon() {
   )
 }
 
+function humanName(name: string) {
+  return name.replace(/[-_]/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())
+}
+
 export default async function GitHubRepos() {
   const { owned } = await getGitHubRepos('fabiomughilan')
 
@@ -78,18 +82,18 @@ export default async function GitHubRepos() {
                 </svg>
               </div>
 
-              {repo.description && (
-                <p style={{
-                  fontFamily: 'var(--font-b)', fontSize: '0.825rem',
-                  color: 'var(--muted)', lineHeight: 1.55, flex: 1,
-                  display: '-webkit-box',
-                  WebkitLineClamp: 2,
-                  WebkitBoxOrient: 'vertical',
-                  overflow: 'hidden',
-                } as React.CSSProperties}>
-                  {repo.description}
-                </p>
-              )}
+              <p style={{
+                fontFamily: 'var(--font-b)', fontSize: '0.825rem',
+                color: repo.description ? 'var(--muted)' : 'var(--dot)',
+                fontStyle: repo.description ? 'normal' : 'italic',
+                lineHeight: 1.55, flex: 1,
+                display: '-webkit-box',
+                WebkitLineClamp: 2,
+                WebkitBoxOrient: 'vertical',
+                overflow: 'hidden',
+              } as React.CSSProperties}>
+                {repo.description ?? humanName(repo.name)}
+              </p>
 
               {repo.topics && repo.topics.length > 0 && (
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}>

@@ -9,7 +9,12 @@ function StarIcon() {
   )
 }
 
+function humanName(name: string) {
+  return name.replace(/[-_]/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())
+}
+
 function RepoCard({ repo, badge }: { repo: GitHubRepo; badge?: string }) {
+  const isFork = repo.fork
   return (
     <a
       href={repo.html_url}
@@ -27,16 +32,17 @@ function RepoCard({ repo, badge }: { repo: GitHubRepo; badge?: string }) {
         position: 'relative',
       }}
     >
-      {badge && (
+      {(badge || isFork) && (
         <span style={{
           position: 'absolute', top: 12, right: 12,
           fontFamily: 'var(--font-m)', fontSize: '0.6rem', fontWeight: 500,
           letterSpacing: '0.07em', textTransform: 'uppercase',
-          color: 'var(--accent2)', background: 'var(--accent-light)',
+          color: isFork && !badge ? 'var(--muted)' : 'var(--accent2)',
+          background: 'var(--surface)',
           padding: '2px 7px', borderRadius: 999,
           border: '1px solid var(--line)',
         }}>
-          {badge}
+          {badge ?? 'fork'}
         </span>
       )}
 
@@ -53,18 +59,18 @@ function RepoCard({ repo, badge }: { repo: GitHubRepo; badge?: string }) {
         </svg>
       </div>
 
-      {repo.description && (
-        <p style={{
-          fontFamily: 'var(--font-b)', fontSize: '0.825rem',
-          color: 'var(--muted)', lineHeight: 1.55, flex: 1,
-          display: '-webkit-box',
-          WebkitLineClamp: 2,
-          WebkitBoxOrient: 'vertical',
-          overflow: 'hidden',
-        } as React.CSSProperties}>
-          {repo.description}
-        </p>
-      )}
+      <p style={{
+        fontFamily: 'var(--font-b)', fontSize: '0.825rem',
+        color: repo.description ? 'var(--muted)' : 'var(--dot)',
+        lineHeight: 1.55, flex: 1,
+        display: '-webkit-box',
+        WebkitLineClamp: 2,
+        WebkitBoxOrient: 'vertical',
+        overflow: 'hidden',
+        fontStyle: repo.description ? 'normal' : 'italic',
+      } as React.CSSProperties}>
+        {repo.description ?? humanName(repo.name)}
+      </p>
 
       {repo.topics && repo.topics.length > 0 && (
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}>

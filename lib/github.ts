@@ -43,7 +43,7 @@ export async function getOwnedRepos(username: string): Promise<GitHubRepo[]> {
     )
     if (!res.ok) return []
     const repos: GitHubRepo[] = await res.json()
-    return repos.filter((r) => !r.fork)
+    return repos
   } catch {
     return []
   }
