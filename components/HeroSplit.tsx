@@ -1,8 +1,11 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import dynamic from 'next/dynamic'
 import HubDiagram from './HubDiagram'
 import { gsap } from '@/lib/gsap'
+
+const HeroCanvas = dynamic(() => import('./HeroCanvas'), { ssr: false })
 
 export default function HeroSplit() {
   const leftRef = useRef<HTMLDivElement>(null)
@@ -164,16 +167,17 @@ export default function HeroSplit() {
           borderLeft: '1px solid var(--line)',
         }}
       >
-        <div
-          style={{
-            position: 'absolute',
-            inset: 0,
-            pointerEvents: 'none',
-            zIndex: 1,
-            background:
-              'linear-gradient(to bottom, var(--bg) 0%, transparent 18%, transparent 82%, var(--bg) 100%)',
-          }}
-        />
+        {/* interactive particle canvas */}
+        <HeroCanvas />
+
+        {/* edge fade over canvas */}
+        <div style={{
+          position: 'absolute', inset: 0,
+          pointerEvents: 'none', zIndex: 1,
+          background: 'linear-gradient(to bottom, var(--bg) 0%, transparent 15%, transparent 85%, var(--bg) 100%)',
+        }} />
+
+        {/* hub sits on top */}
         <div style={{ position: 'relative', zIndex: 2 }}>
           <HubDiagram />
         </div>

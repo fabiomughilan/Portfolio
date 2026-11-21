@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { featuredProjects, categoryLabels } from '@/lib/projects'
 import { gsap, ScrollTrigger, registerGSAP } from '@/lib/gsap'
+import TiltCard from './TiltCard'
 
 export default function FeaturedWork() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -57,18 +58,23 @@ export default function FeaturedWork() {
           gap: 'var(--sp5)',
         }}>
           {featuredProjects.map((project) => (
-            <Link
+            <TiltCard
               key={project.slug}
-              href={`/work/${project.slug}`}
-              className="featured-card fc-hover"
+              className="featured-card"
               style={{
-                display: 'flex', flexDirection: 'column',
                 background: 'var(--card-bg)',
                 border: '1px solid var(--line)',
                 borderRadius: 'var(--r4)',
-                textDecoration: 'none',
                 overflow: 'hidden',
-                transition: 'border-color 0.2s var(--ease), transform 0.2s var(--ease)',
+              }}
+            >
+            <Link
+              href={`/work/${project.slug}`}
+              className="fc-hover"
+              style={{
+                display: 'flex', flexDirection: 'column',
+                textDecoration: 'none',
+                height: '100%',
               }}
             >
               {/* accent bar */}
@@ -141,15 +147,16 @@ export default function FeaturedWork() {
                 </div>
               </div>
             </Link>
+            </TiltCard>
           ))}
         </div>
       </div>
 
       <style>{`
-        .fc-hover:hover {
+        .featured-card:hover {
           border-color: var(--accent) !important;
-          transform: translateY(-3px) !important;
         }
+        .fc-hover { display: flex; flex-direction: column; }
       `}</style>
     </section>
   )
