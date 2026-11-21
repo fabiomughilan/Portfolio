@@ -1,3 +1,5 @@
+'use client'
+
 import HubDiagram from './HubDiagram'
 
 export default function HeroSplit() {
