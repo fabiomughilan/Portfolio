@@ -30,26 +30,6 @@
   --r-sm:4px;--r-md:8px;--r-lg:12px;--r-pill:999px;
   color-scheme:light;
 }
-@media(prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --bg:#0b0e0d;--surface:#181e1b;--paper:#121715;
-    --text:#f1efe7;--muted:#a6b0aa;--line:#35403b;
-    --accent:#78d6b2;--accent2:#d99a7e;--dot:#46534d;
-    --solid:#050806;--on-solid:#f5f2e9;
-    --border-s:rgba(241,239,231,.06);--border-d:rgba(241,239,231,.11);
-    --shadow-s:0 1px 4px rgba(0,0,0,.24),inset 0 1px 0 rgba(255,255,255,.04);
-    color-scheme:dark;
-  }
-}
-:root[data-theme="dark"]{
-  --bg:#0b0e0d;--surface:#181e1b;--paper:#121715;
-  --text:#f1efe7;--muted:#a6b0aa;--line:#35403b;
-  --accent:#78d6b2;--accent2:#d99a7e;--dot:#46534d;
-  --solid:#050806;--on-solid:#f5f2e9;
-  --border-s:rgba(241,239,231,.06);--border-d:rgba(241,239,231,.11);
-  --shadow-s:0 1px 4px rgba(0,0,0,.24),inset 0 1px 0 rgba(255,255,255,.04);
-  color-scheme:dark;
-}
 
 /* ── Reset ──────────────────────────────────────────── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -363,12 +343,6 @@ img{max-width:100%}
       <a class="hdr-icon" href="https://x.com/fabiomughilan" target="_blank" title="X / Twitter" style="font-weight:500;font-size:13px;font-family:var(--font-m)">𝕏</a>
       <!-- Resume -->
       <a class="hdr-icon" href="https://drive.google.com/file/d/1uIW1yDDUDWapWQsupvuxsuje0nBuUHcW/view" target="_blank" title="Resume" style="font-size:12px;font-family:var(--font-m)">CV</a>
-      <!-- Theme -->
-      <button class="theme-btn" id="theme-btn" onclick="toggleTheme()" title="Toggle theme" aria-label="Toggle dark mode">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
-          <path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/>
-        </svg>
-      </button>
     </div>
   </nav>
 </header>
@@ -380,13 +354,13 @@ img{max-width:100%}
     <!-- Hero -->
     <section class="hero">
       <p class="hero-eye">Hello — I'm Fabio Mughilan</p>
-      <h1 class="hero-h">Full-stack developer<br><span>building across web3,</span><br>AI and distributed systems.</h1>
+      <h1 class="hero-h">Software engineer<br><span>building scalable apps,</span><br>microservices &amp; AI systems.</h1>
       <div class="hero-roles">
         <span>Full Stack Developer</span><span class="role-sep">·</span>
-        <span>LLM Developer</span><span class="role-sep">·</span>
-        <span>Web3 Developer</span>
+        <span>AI Engineer</span><span class="role-sep">·</span>
+        <span>Software Engineer</span>
       </div>
-      <p class="hero-sub">B.Tech CSE graduate from Vel Tech (class of 2026) with 1 year of professional experience. I've shipped DeFi protocols, trained ML models and built production web apps.</p>
+      <p class="hero-sub">B.Tech CSE graduate from Vel Tech (8.4 CGPA, class of 2026). I've shipped enterprise full-stack solutions at Ernst &amp; Young, built cloud-native microservices at My DevConnect, and won a $2000 bounty at ETHGlobal Bangkok.</p>
       <div class="btn-row">
         <button class="btn btn-solid" onclick="nav('#work')">Explore my work</button>
         <button class="btn btn-ghost" onclick="nav('#journey')">Journey</button>
@@ -523,7 +497,7 @@ img{max-width:100%}
         </div>
       </div>
       <div class="view-all">
-        <button class="sec-link" onclick="nav('#work')">View all 8 projects →</button>
+        <button class="sec-link" onclick="nav('#work')">View all 9 projects →</button>
       </div>
     </section>
 
@@ -535,12 +509,12 @@ img{max-width:100%}
       <table class="tools-tbl">
         <thead><tr><th>Category</th><th>Technologies</th></tr></thead>
         <tbody>
-          <tr><td>Languages</td><td>JavaScript · TypeScript · Python · Solidity · Go</td></tr>
-          <tr><td>Web3</td><td>Ethereum · Polygon · BSC · Cosmos SDK · Hardhat · Foundry · ethers.js · wagmi · IPFS · 1inch Fusion+ · LayerZero</td></tr>
-          <tr><td>AI / LLMs</td><td>LangChain · LangGraph · CrewAI · Zerepy · Mixtral · ChromaDB · TensorFlow · scikit-learn · FastAPI</td></tr>
-          <tr><td>Frontend</td><td>React · Next.js · Redux · Phaser3 · Material UI · HTML · CSS</td></tr>
-          <tr><td>Backend</td><td>Node.js · Express · Flask · MongoDB · PostgreSQL · MySQL · Firebase · GraphQL</td></tr>
-          <tr><td>Tools &amp; Infra</td><td>Docker · Git · Vercel · Netlify · Azure · VS Code · Figma · Postman</td></tr>
+          <tr><td>Languages</td><td>Python · TypeScript · Java · Kotlin · JavaScript</td></tr>
+          <tr><td>Frameworks</td><td>React.js · Next.js · Node.js · Express.js · Spring Boot · FastAPI</td></tr>
+          <tr><td>AI / LLMs</td><td>RAG · LangChain · LangGraph · CrewAI · AI Agents · Vector Databases · Embeddings · Fine-Tuning</td></tr>
+          <tr><td>Cloud &amp; Infra</td><td>AWS · LocalStack · Docker · CI/CD · Git · Production Deployment</td></tr>
+          <tr><td>Databases</td><td>PostgreSQL · MongoDB · MySQL · Firebase</td></tr>
+          <tr><td>Engineering</td><td>Data Structures &amp; Algorithms · System Design · Microservices · REST APIs · WebSockets · WebRTC · Testing</td></tr>
         </tbody>
       </table>
     </section>
@@ -560,28 +534,16 @@ img{max-width:100%}
         <div class="tl-group-title">01 · Experience</div>
         <div class="tl">
           <div class="tl-item">
-            <div class="tl-period">Jan 2024 — Present</div>
-            <div class="tl-title">Blockchain &amp; Full-Stack Developer — Freelance</div>
+            <div class="tl-period">Feb 2026 — Oct 2026</div>
+            <div class="tl-title">Full Stack Intern — Ernst &amp; Young (EY)</div>
+            <div class="tl-sub">Pune, India</div>
+            <div class="tl-detail">Contributed to multiple enterprise client projects including Digimetal, Motor Insurance, and Mutual Funds, delivering end-to-end full-stack solutions. Built reusable UI components in Storybook, integrated them into Next.js apps in TypeScript, and developed backend services using Spring Boot with reactive programming in Kotlin. Supported production deployments and Hypercare, resolving critical issues and ensuring stable client delivery.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-period">Sept 2025 — Dec 2025</div>
+            <div class="tl-title">SDE Intern — My DevConnect (PCX Pay)</div>
             <div class="tl-sub">Remote</div>
-            <div class="tl-detail">Built DeFi platforms, NFT marketplaces and token contracts across Ethereum, Polygon, BSC and Cosmos-based networks. Wrote and audited Solidity contracts, built React/Next.js frontends with ethers.js and wagmi integrations.</div>
-          </div>
-          <div class="tl-item">
-            <div class="tl-period">Jan 2025 — Feb 2025</div>
-            <div class="tl-title">Cybersecurity Intern — L&amp;T Technology Services</div>
-            <div class="tl-sub">Flipr Platforms</div>
-            <div class="tl-detail">Managed DevOps workflows and automated security processes. Worked across XDR, SIEM, Azure environments with incident handling and threat response.</div>
-          </div>
-          <div class="tl-item">
-            <div class="tl-period">Jun 2023 — Present</div>
-            <div class="tl-title">Full Stack Intern — Nexus Info</div>
-            <div class="tl-sub">Remote</div>
-            <div class="tl-detail">Frontend development on a production web app using ReactJS, Redux and Material UI. Built responsive components and contributed to state management architecture.</div>
-          </div>
-          <div class="tl-item">
-            <div class="tl-period">Jun 2023 — Present</div>
-            <div class="tl-title">AI &amp; ML Intern — NIELIT Calicut</div>
-            <div class="tl-sub">Calicut, India</div>
-            <div class="tl-detail">Applied machine learning models with Python, scikit-learn, TensorFlow and Keras. Worked on NLP tasks and supervised classification pipelines.</div>
+            <div class="tl-detail">Developed frontend and backend integrations using React.js and Python, implementing REST-based application workflows. Architected and deployed scalable microservices using AWS and LocalStack, focusing on reliable backend services and cloud-native development.</div>
           </div>
         </div>
       </div>
@@ -597,13 +559,13 @@ img{max-width:100%}
             <div class="tl-detail">CGPA: 8.4 · Core courses: Data Structures, Algorithms, OOP, DBMS, OS, Computer Networks.</div>
           </div>
           <div class="tl-item">
-            <div class="tl-period">Apr 2021 — Apr 2022</div>
+            <div class="tl-period">June 2021 — Mar 2022</div>
             <div class="tl-title">Class XII — CBSE, Science with Computer</div>
             <div class="tl-sub">The Oxford School, Trivandrum</div>
-            <div class="tl-detail">Aggregate: 77%</div>
+            <div class="tl-detail">Aggregate: 73.66%</div>
           </div>
           <div class="tl-item">
-            <div class="tl-period">Jun 2019 — Apr 2020</div>
+            <div class="tl-period">June 2019 — Mar 2020</div>
             <div class="tl-title">Class X — CBSE, Science with Computer Application</div>
             <div class="tl-sub">The Oxford School, Trivandrum</div>
             <div class="tl-detail">Aggregate: 84%</div>
@@ -617,10 +579,17 @@ img{max-width:100%}
         <div class="tl">
           <div class="tl-item">
             <div class="tl-period">November 2024</div>
-            <div class="tl-title">ETHGlobal Bangkok — Bounty Winner</div>
-            <div class="tl-sub">Workverse · $2000 award</div>
-            <div class="tl-detail">Won a $2000 bounty at ETHGlobal Bangkok for Workverse, a 2D virtual office integrating decentralised identity and real-time communication via blockchain protocols.</div>
-            <div class="tl-award">🏆 $2000 USD Bounty</div>
+            <div class="tl-title">ETHGlobal Bangkok — 1st Prize Bounty</div>
+            <div class="tl-sub">Workverse · Push Protocol · $2000</div>
+            <div class="tl-detail">Won a $2000 bounty from Push Protocol at ETHGlobal Bangkok for Workverse, a 2D virtual office integrating decentralised identity and real-time communication via blockchain protocols.</div>
+            <div class="tl-award">🏆 $2000 USD Bounty · Push Protocol</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-period">2024</div>
+            <div class="tl-title">1st Prize — Infosys Springboard Ideathon</div>
+            <div class="tl-sub">Infosys Springboard</div>
+            <div class="tl-detail">Won first place at the Infosys Springboard Ideathon for an innovative technology solution.</div>
+            <div class="tl-award">🏆 1st Prize</div>
           </div>
         </div>
       </div>
@@ -657,7 +626,7 @@ img{max-width:100%}
 <!-- Footer -->
 <footer>
   <div class="footer">
-    <div class="footer-left"><strong>Fabio Mughilan</strong> · Full Stack · Web3 · AI Developer · 1 yr experience · Open to work</div>
+    <div class="footer-left"><strong>Fabio Mughilan</strong> · Software Engineer · Full Stack · AI · Open to work</div>
     <div class="footer-links">
       <a class="footer-link" href="https://github.com/fabiomughilan" target="_blank">GitHub</a>
       <a class="footer-link" href="https://www.linkedin.com/in/fabiomughilan/" target="_blank">LinkedIn</a>
@@ -776,6 +745,19 @@ const projects = [
     repo: 'https://github.com/fabiomughilan/GST',
     live: null,
     dark: false
+  },
+  {
+    slug: 'travelai',
+    title: 'TravelAI',
+    eyebrow: 'AI Agents · Trip Planner',
+    year: '2025',
+    desc: 'AI-powered trip planner with multi-agent orchestration and real-time node-based workflows.',
+    detail: 'Built with Next.js, React Flow, LangGraph, and CrewAI. Enables conversational trip design where LLM-based agents dynamically research destinations, optimize travel plans, and generate personalized itineraries based on user preferences, budget, and trip constraints. FastAPI backend supports end-to-end booking flows.',
+    tags: ['Next.js','React Flow','LangGraph','CrewAI','FastAPI','Python'],
+    cats: ['ai','fullstack'],
+    repo: 'https://github.com/fabiomughilan/TravelAI',
+    live: null,
+    dark: false
   }
 ];
 
@@ -788,7 +770,8 @@ const thumbSVGs = {
   'healthmind': `<svg width="80" height="80" viewBox="0 0 80 80" fill="none"><path d="M40 60 C40 60 15 44 15 28a16 16 0 0132 0 16 16 0 0132 0C79 44 40 60 40 60Z" stroke="var(--accent)" stroke-width="1.2" fill="rgba(25,93,73,.1)"/><path d="M34 32h12M40 26v12" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/></svg>`,
   'fireworks': `<svg width="80" height="80" viewBox="0 0 80 80" fill="none"><path d="M40 10 L40 15M40 65 L40 70M10 40 L15 40M65 40 L70 40M19 19 L23 23M57 57 L61 61M61 19 L57 23M23 57 L19 61" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/><circle cx="40" cy="40" r="12" stroke="var(--accent)" stroke-width="1.5" fill="rgba(25,93,73,.1)"/><circle cx="40" cy="40" r="4" fill="var(--accent)"/></svg>`,
   'phishing': `<svg width="80" height="80" viewBox="0 0 80 80" fill="none"><rect x="12" y="22" width="56" height="36" rx="4" stroke="var(--accent)" stroke-width="1.2"/><path d="M12 30 L40 48 L68 30" stroke="var(--accent)" stroke-width="1.2"/><path d="M54 42 L66 54M60 42 L66 48" stroke="var(--accent2)" stroke-width="1.5" stroke-linecap="round"/></svg>`,
-  'gst': `<svg width="80" height="80" viewBox="0 0 80 80" fill="none"><rect x="12" y="12" width="56" height="56" rx="4" stroke="var(--accent)" stroke-width="1.2"/><path d="M22 55 L30 38 L38 44 L48 28 L58 25" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="58" cy="25" r="3" fill="var(--accent)"/></svg>`
+  'gst': `<svg width="80" height="80" viewBox="0 0 80 80" fill="none"><rect x="12" y="12" width="56" height="56" rx="4" stroke="var(--accent)" stroke-width="1.2"/><path d="M22 55 L30 38 L38 44 L48 28 L58 25" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="58" cy="25" r="3" fill="var(--accent)"/></svg>`,
+  'travelai': `<svg width="80" height="80" viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="22" stroke="var(--accent)" stroke-width="1.2" stroke-dasharray="4 3"/><path d="M40 18 L46 32 L40 28 L34 32 Z" fill="var(--accent)" opacity=".6"/><path d="M18 40 L28 34 L28 46 Z" stroke="var(--accent)" stroke-width="1.2" fill="none"/><path d="M62 40 L52 46 L52 34 Z" stroke="var(--accent)" stroke-width="1.2" fill="none"/><circle cx="40" cy="40" r="5" fill="var(--accent)"/><path d="M25 25 Q40 15 55 25" stroke="var(--dot)" stroke-width="1" fill="none"/><path d="M25 55 Q40 65 55 55" stroke="var(--dot)" stroke-width="1" fill="none"/></svg>`
 };
 
 // ── Render project grid ─────────────────────────────────
@@ -873,20 +856,6 @@ function render(hash) {
 
 window.addEventListener('popstate', () => render(location.hash));
 
-// ── Theme ───────────────────────────────────────────────
-function toggleTheme() {
-  const root = document.documentElement;
-  const cur = root.dataset.theme;
-  const next = cur === 'dark' ? 'light' : 'dark';
-  root.dataset.theme = next;
-  try { localStorage.setItem('portfolio-theme', next); } catch(e){}
-}
-(function(){
-  try {
-    var t = localStorage.getItem('portfolio-theme');
-    if (t) document.documentElement.dataset.theme = t;
-  } catch(e){}
-})();
 
 // ── Scroll-aware header ─────────────────────────────────
 window.addEventListener('scroll', function() {
