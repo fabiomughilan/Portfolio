@@ -8,93 +8,56 @@ function StarIcon() {
   )
 }
 
-function ForkIcon() {
-  return (
-    <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-      <path d="M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z" />
-    </svg>
-  )
-}
-
 export default async function GitHubRepos() {
-  const repos = await getGitHubRepos('fabiomughilan')
+  const { owned } = await getGitHubRepos('fabiomughilan')
 
-  if (repos.length === 0) {
-    return null
-  }
+  if (owned.length === 0) return null
 
   return (
     <section className="section">
       <div className="container">
-        {/* heading */}
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'baseline',
-            justifyContent: 'space-between',
-            marginBottom: 'var(--sp8)',
-            flexWrap: 'wrap',
-            gap: 'var(--sp3)',
-          }}
-        >
+        <div style={{
+          display: 'flex', alignItems: 'baseline',
+          justifyContent: 'space-between',
+          marginBottom: 'var(--sp8)', flexWrap: 'wrap', gap: 'var(--sp3)',
+        }}>
           <div>
-            <h2
-              style={{
-                fontFamily: 'var(--font-d)',
-                fontSize: 'clamp(1.4rem, 3vw, 2rem)',
-                fontWeight: 600,
-                color: 'var(--solid)',
-                marginBottom: 'var(--sp1)',
-              }}
-            >
+            <h2 style={{
+              fontFamily: 'var(--font-d)',
+              fontSize: 'clamp(1.4rem, 3vw, 2rem)',
+              fontWeight: 600, color: 'var(--solid)', marginBottom: 'var(--sp1)',
+            }}>
               On GitHub
             </h2>
             <p style={{ fontFamily: 'var(--font-b)', fontSize: '0.875rem', color: 'var(--muted)' }}>
               Live from{' '}
-              <a
-                href="https://github.com/fabiomughilan"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: 'var(--accent)', fontWeight: 500 }}
-              >
+              <a href="https://github.com/fabiomughilan" target="_blank" rel="noopener noreferrer"
+                style={{ color: 'var(--accent)', fontWeight: 500 }}>
                 github.com/fabiomughilan
               </a>
               {' '}· updates hourly
             </p>
           </div>
-          <a
-            href="https://github.com/fabiomughilan?tab=repositories"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              fontFamily: 'var(--font-d)',
-              fontSize: '0.875rem',
-              fontWeight: 500,
-              color: 'var(--accent)',
-            }}
-          >
+          <a href="https://github.com/fabiomughilan?tab=repositories" target="_blank" rel="noopener noreferrer"
+            style={{ fontFamily: 'var(--font-d)', fontSize: '0.875rem', fontWeight: 500, color: 'var(--accent)' }}>
             All repos ↗
           </a>
         </div>
 
-        {/* grid */}
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
-            gap: 'var(--sp4)',
-          }}
-        >
-          {repos.slice(0, 12).map((repo) => (
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+          gap: 'var(--sp4)',
+        }}>
+          {owned.slice(0, 12).map((repo) => (
             <a
               key={repo.id}
               href={repo.html_url}
               target="_blank"
               rel="noopener noreferrer"
+              className="gh-card"
               style={{
-                display: 'flex',
-                flexDirection: 'column',
-                gap: 'var(--sp3)',
+                display: 'flex', flexDirection: 'column', gap: 'var(--sp3)',
                 padding: 'var(--sp5)',
                 background: 'var(--card-bg)',
                 border: '1px solid var(--line)',
@@ -102,20 +65,12 @@ export default async function GitHubRepos() {
                 textDecoration: 'none',
                 transition: 'border-color 0.18s ease',
               }}
-              className="gh-card"
             >
-              {/* repo name */}
               <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 8 }}>
-                <span
-                  style={{
-                    fontFamily: 'var(--font-d)',
-                    fontWeight: 600,
-                    fontSize: '0.95rem',
-                    color: 'var(--accent)',
-                    lineHeight: 1.3,
-                    wordBreak: 'break-word',
-                  }}
-                >
+                <span style={{
+                  fontFamily: 'var(--font-d)', fontWeight: 600, fontSize: '0.95rem',
+                  color: 'var(--accent)', lineHeight: 1.3, wordBreak: 'break-word',
+                }}>
                   {repo.name}
                 </span>
                 <svg width="14" height="14" viewBox="0 0 16 16" fill="var(--muted)" style={{ flexShrink: 0, marginTop: 2 }}>
@@ -123,66 +78,42 @@ export default async function GitHubRepos() {
                 </svg>
               </div>
 
-              {/* description */}
               {repo.description && (
-                <p
-                  style={{
-                    fontFamily: 'var(--font-b)',
-                    fontSize: '0.825rem',
-                    color: 'var(--muted)',
-                    lineHeight: 1.55,
-                    flex: 1,
-                    display: '-webkit-box',
-                    WebkitLineClamp: 2,
-                    WebkitBoxOrient: 'vertical',
-                    overflow: 'hidden',
-                  } as React.CSSProperties}
-                >
+                <p style={{
+                  fontFamily: 'var(--font-b)', fontSize: '0.825rem',
+                  color: 'var(--muted)', lineHeight: 1.55, flex: 1,
+                  display: '-webkit-box',
+                  WebkitLineClamp: 2,
+                  WebkitBoxOrient: 'vertical',
+                  overflow: 'hidden',
+                } as React.CSSProperties}>
                   {repo.description}
                 </p>
               )}
 
-              {/* topics */}
               {repo.topics && repo.topics.length > 0 && (
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}>
                   {repo.topics.slice(0, 4).map((topic) => (
-                    <span
-                      key={topic}
-                      style={{
-                        fontFamily: 'var(--font-m)',
-                        fontSize: '0.65rem',
-                        color: 'var(--accent)',
-                        background: 'var(--accent-light)',
-                        padding: '2px 7px',
-                        borderRadius: 999,
-                        border: '1px solid rgba(25,93,73,0.15)',
-                      }}
-                    >
+                    <span key={topic} style={{
+                      fontFamily: 'var(--font-m)', fontSize: '0.65rem',
+                      color: 'var(--accent)', background: 'var(--accent-light)',
+                      padding: '2px 7px', borderRadius: 999,
+                      border: '1px solid var(--line)',
+                    }}>
                       {topic}
                     </span>
                   ))}
                 </div>
               )}
 
-              {/* footer: language + stars + forks */}
-              <div
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 'var(--sp4)',
-                  marginTop: 'auto',
-                }}
-              >
+              <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--sp4)', marginTop: 'auto' }}>
                 {repo.language && (
                   <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
-                    <span
-                      style={{
-                        width: 10, height: 10,
-                        borderRadius: '50%',
-                        background: languageColors[repo.language] ?? 'var(--muted)',
-                        flexShrink: 0,
-                      }}
-                    />
+                    <span style={{
+                      width: 10, height: 10, borderRadius: '50%',
+                      background: languageColors[repo.language] ?? 'var(--muted)',
+                      flexShrink: 0,
+                    }} />
                     <span style={{ fontFamily: 'var(--font-m)', fontSize: '0.72rem', color: 'var(--muted)' }}>
                       {repo.language}
                     </span>
@@ -191,17 +122,7 @@ export default async function GitHubRepos() {
                 {repo.stargazers_count > 0 && (
                   <div style={{ display: 'flex', alignItems: 'center', gap: 4, color: 'var(--muted)' }}>
                     <StarIcon />
-                    <span style={{ fontFamily: 'var(--font-m)', fontSize: '0.72rem' }}>
-                      {repo.stargazers_count}
-                    </span>
-                  </div>
-                )}
-                {repo.forks_count > 0 && (
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 4, color: 'var(--muted)' }}>
-                    <ForkIcon />
-                    <span style={{ fontFamily: 'var(--font-m)', fontSize: '0.72rem' }}>
-                      {repo.forks_count}
-                    </span>
+                    <span style={{ fontFamily: 'var(--font-m)', fontSize: '0.72rem' }}>{repo.stargazers_count}</span>
                   </div>
                 )}
               </div>

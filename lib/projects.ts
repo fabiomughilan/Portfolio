@@ -27,6 +27,32 @@ export const projects: Project[] = [
     featured: true,
     color: '#4a9070',
   },
+  {
+    slug: 'digimetal',
+    title: 'Digimetal',
+    tagline: 'Digital gold & silver investment platform for EY',
+    description:
+      'Enterprise-grade digital metals investment portal developed at Ernst & Young. Built a full component library with Storybook for design-system consistency across the platform. Implemented end-to-end investment flows including gold and silver trading, portfolio tracking, and statement generation using Next.js and Spring Boot microservices.',
+    categories: ['fullstack'],
+    tech: ['Next.js', 'TypeScript', 'Spring Boot', 'Kotlin', 'Storybook', 'REST APIs'],
+    year: 2026,
+    links: {},
+    featured: true,
+    color: '#2d7a60',
+  },
+  {
+    slug: 'motor-insurance',
+    title: 'Motor Insurance Portal',
+    tagline: 'End-to-end motor insurance platform built at EY',
+    description:
+      'A full-stack motor insurance portal developed during the EY internship. Engineered policy issuance, claims processing, and renewal flows. Architected backend services with Spring Boot (Kotlin) and built a responsive, accessible UI with Next.js. Maintained a Storybook component library shared across the EY insurance product suite.',
+    categories: ['fullstack'],
+    tech: ['Next.js', 'TypeScript', 'Kotlin', 'Spring Boot', 'Storybook', 'PostgreSQL'],
+    year: 2026,
+    links: {},
+    featured: true,
+    color: '#3d6b58',
+  },
 ]
 
 export const categoryLabels: Record<string, string> = {
