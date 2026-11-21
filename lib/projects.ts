@@ -4,11 +4,11 @@ export const projects: Project[] = [
   {
     slug: 'workverse',
     title: 'WorkVerse',
-    tagline: 'Decentralised freelance marketplace on Solana',
+    tagline: 'Scalable 2D virtual office with real-time collaboration',
     description:
-      'A Web3 platform connecting freelancers and clients with on-chain escrow contracts, reputation NFTs, and dispute resolution via DAO governance. Built on Solana for sub-second finality and sub-cent fees.',
-    categories: ['web3', 'fullstack'],
-    tech: ['Solana', 'Rust', 'Anchor', 'React', 'TypeScript', 'Metaplex'],
+      'A 2D virtual office platform supporting real-time multi-user interactions and presence management. Implemented event-driven communication and real-time notifications using WebSockets and Push Protocol SDK. Integrated WebRTC for low-latency voice and video communication across multiple users. Won 1st Prize ($2,000) from Push Protocol at ETHGlobal Bangkok.',
+    categories: ['fullstack', 'systems'],
+    tech: ['React.js', 'Phaser 3', 'TypeScript', 'WebSockets', 'WebRTC', 'Push Protocol SDK'],
     year: 2024,
     links: { github: 'https://github.com/fabiomughilan/workverse' },
     featured: true,
@@ -33,11 +33,11 @@ export const projects: Project[] = [
   {
     slug: 'travelai',
     title: 'TravelAI',
-    tagline: 'AI-powered travel itinerary planner',
+    tagline: 'AI-powered trip planner with multi-agent orchestration',
     description:
-      'An intelligent travel companion that generates personalised day-by-day itineraries using LLM reasoning, integrates live flight and hotel pricing via APIs, and adapts plans based on real-time weather and user preferences.',
+      'An advanced AI trip planner with conversational trip design, real-time node-based workflows, and multi-agent orchestration for personalised itineraries. LLM-based agents dynamically research destinations, optimise travel plans, and generate itineraries based on user preferences, budget, and constraints. Backend APIs built with FastAPI supporting end-to-end booking flows.',
     categories: ['ai', 'fullstack'],
-    tech: ['Python', 'FastAPI', 'Claude API', 'React', 'PostgreSQL', 'Redis'],
+    tech: ['Next.js', 'React Flow', 'LangGraph', 'CrewAI', 'FastAPI', 'Python'],
     year: 2024,
     links: { github: 'https://github.com/fabiomughilan/travelai' },
     featured: true,

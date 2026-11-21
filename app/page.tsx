@@ -2,12 +2,12 @@ import HeroSplit from '@/components/HeroSplit'
 import FeaturedWork from '@/components/FeaturedWork'
 
 const techStack = [
-  { area: 'Languages',  items: ['TypeScript', 'Python', 'Rust', 'Solidity', 'Go'] },
-  { area: 'Frontend',   items: ['Next.js', 'React', 'React Native', 'Tailwind'] },
-  { area: 'Backend',    items: ['Node.js', 'FastAPI', 'PostgreSQL', 'Redis', 'Docker'] },
-  { area: 'Web3',       items: ['Solana', 'Anchor', 'Ethereum', 'Ethers.js', 'Hardhat'] },
-  { area: 'AI / ML',   items: ['PyTorch', 'TensorFlow', 'Claude API', 'MLflow', 'AWS SageMaker'] },
-  { area: 'Infra',      items: ['AWS', 'Vercel', 'Terraform', 'GitHub Actions', 'Linux'] },
+  { area: 'Languages',           items: ['Python', 'TypeScript', 'Java', 'Kotlin', 'JavaScript'] },
+  { area: 'Frameworks',          items: ['Node.js', 'Express.js', 'React.js', 'Next.js', 'Spring Boot', 'FastAPI'] },
+  { area: 'AI Tools',            items: ['RAG', 'LangChain', 'LangGraph', 'CrewAI', 'AI Agents', 'Vector Databases'] },
+  { area: 'Software Engineering', items: ['System Design', 'Microservices', 'REST APIs', 'WebSockets', 'WebRTC', 'CI/CD'] },
+  { area: 'Cloud & Infra',       items: ['AWS', 'LocalStack', 'Docker', 'Git', 'Vercel', 'Production Deployment'] },
+  { area: 'Databases',           items: ['PostgreSQL', 'MongoDB', 'Redis'] },
 ]
 
 export default function HomePage() {

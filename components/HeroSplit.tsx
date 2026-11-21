@@ -1,8 +1,32 @@
 'use client'
 
+import { useEffect, useRef } from 'react'
 import HubDiagram from './HubDiagram'
+import { gsap } from '@/lib/gsap'
 
 export default function HeroSplit() {
+  const leftRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (!leftRef.current) return
+    const els = leftRef.current.querySelectorAll('.hero-anim')
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        els,
+        { opacity: 0, y: 28 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.7,
+          ease: 'power3.out',
+          stagger: 0.12,
+          clearProps: 'transform',
+        }
+      )
+    }, leftRef)
+    return () => ctx.revert()
+  }, [])
+
   return (
     <section
       style={{
@@ -14,6 +38,7 @@ export default function HeroSplit() {
     >
       {/* left */}
       <div
+        ref={leftRef}
         style={{
           flex: '0 0 50%',
           padding: 'var(--sp16) var(--sp8) var(--sp12) var(--sp8)',
@@ -23,14 +48,12 @@ export default function HeroSplit() {
           gap: 'var(--sp6)',
         }}
       >
-        <span
-          className="tag"
-          style={{ width: 'fit-content' }}
-        >
+        <span className="tag hero-anim" style={{ width: 'fit-content' }}>
           Available for hire
         </span>
 
         <h1
+          className="hero-anim"
           style={{
             fontFamily: 'var(--font-d)',
             fontSize: 'clamp(2rem, 4vw, 3.4rem)',
@@ -46,6 +69,7 @@ export default function HeroSplit() {
         </h1>
 
         <p
+          className="hero-anim"
           style={{
             fontFamily: 'var(--font-b)',
             fontSize: '1.05rem',
@@ -54,14 +78,15 @@ export default function HeroSplit() {
             maxWidth: '48ch',
           }}
         >
-          Building at the intersection of{' '}
+          Building scalable apps across{' '}
           <strong style={{ color: 'var(--text)', fontWeight: 500 }}>
-            Web3, AI & distributed systems
+            full-stack, microservices & AI systems
           </strong>
-          . B.E. Computer Engineering at VCET, Mumbai.
+          . B.Tech CSE at Vel Tech University, Chennai.
         </p>
 
         <div
+          className="hero-anim"
           style={{
             display: 'flex',
             flexWrap: 'wrap',
@@ -83,6 +108,7 @@ export default function HeroSplit() {
         </div>
 
         <div
+          className="hero-anim"
           style={{
             display: 'flex',
             flexWrap: 'wrap',
@@ -91,9 +117,9 @@ export default function HeroSplit() {
           }}
         >
           {[
-            { label: 'Technologies', value: '15+' },
+            { label: 'CGPA', value: '8.4' },
             { label: 'Projects', value: '9' },
-            { label: 'GPA CGPA', value: '7.3' },
+            { label: 'ETHGlobal', value: '$2K' },
           ].map((stat) => (
             <div key={stat.label} style={{ minWidth: 80 }}>
               <div
@@ -138,7 +164,6 @@ export default function HeroSplit() {
           borderLeft: '1px solid var(--line)',
         }}
       >
-        {/* gradient fade top/bottom */}
         <div
           style={{
             position: 'absolute',
