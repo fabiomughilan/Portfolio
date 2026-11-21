@@ -85,7 +85,8 @@ export default function HomePage() {
                         fontFamily: 'var(--font-b)',
                         fontSize: '0.82rem',
                         color: 'var(--text)',
-                        background: 'rgba(19,32,26,0.06)',
+                        background: 'var(--surface)',
+                        border: '1px solid var(--line)',
                         padding: '3px 10px',
                         borderRadius: 4,
                       }}

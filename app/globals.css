@@ -1,33 +1,39 @@
 /* fonts injected via next/font/google in layout.tsx */
 
+/* ─── Light (Heritage) ─────────────────────────────────── */
 :root {
-  /* palette */
-  --bg: #f3f0e8;
-  --bg2: #ece8df;
-  --solid: #13201a;
-  --text: #2a3d33;
-  --muted: #6b7c73;
-  --accent: #195d49;
-  --accent-hover: #12483a;
-  --accent-light: #d4ede6;
-  --line: rgba(19, 32, 26, 0.12);
-  --dot: #c0b8aa;
-  --card-bg: #ece8df;
-  --tag-bg: rgba(25, 93, 73, 0.1);
-  --tag-text: #195d49;
+  --bg:          #f3f0e8;
+  --bg2:         #ece8df;
+  --surface:     #e6e2d8;
+  --paper:       #ffffff;
+  --ink:         #13201a;
+  --solid:       #13201a;
+  --text:        #2a3d33;
+  --muted:       #6b7c73;
+  --accent:      #195d49;
+  --accent2:     #2d7a60;
+  --accent-light:#d4ede6;
+  --line:        rgba(19,32,26,0.10);
+  --line-strong: rgba(19,32,26,0.20);
+  --dot:         #c0b8aa;
+  --card-bg:     #ece8df;
+  --tag-bg:      rgba(25,93,73,0.09);
+  --tag-text:    #195d49;
+  --shadow:      0 1px 3px rgba(19,32,26,0.07), 0 4px 16px rgba(19,32,26,0.05);
 
   /* typography */
   --font-d: 'Manrope', system-ui, sans-serif;
   --font-b: 'Inter', system-ui, sans-serif;
   --font-m: 'IBM Plex Mono', monospace;
 
-  /* spacing scale (8pt) */
-  --sp1: 4px;
-  --sp2: 8px;
-  --sp3: 12px;
-  --sp4: 16px;
-  --sp6: 24px;
-  --sp8: 32px;
+  /* spacing (8pt grid) */
+  --sp1:  4px;
+  --sp2:  8px;
+  --sp3:  12px;
+  --sp4:  16px;
+  --sp5:  20px;
+  --sp6:  24px;
+  --sp8:  32px;
   --sp10: 40px;
   --sp12: 48px;
   --sp16: 64px;
@@ -38,20 +44,35 @@
   --r3: 10px;
   --r4: 16px;
 
-  /* transitions */
-  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease: cubic-bezier(0.4,0,0.2,1);
 }
 
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* ─── Dark (Forest) ───────────────────────────────────── */
+[data-theme="dark"] {
+  --bg:          #0d1510;
+  --bg2:         #111a13;
+  --surface:     #162019;
+  --paper:       #1a2a1e;
+  --ink:         #e6ede8;
+  --solid:       #e6ede8;
+  --text:        #b8ccbc;
+  --muted:       #6a8870;
+  --accent:      #5cb87a;
+  --accent2:     #3d9e62;
+  --accent-light:rgba(92,184,122,0.12);
+  --line:        rgba(180,220,190,0.10);
+  --line-strong: rgba(180,220,190,0.20);
+  --dot:         #263d2b;
+  --card-bg:     #111a13;
+  --tag-bg:      rgba(92,184,122,0.10);
+  --tag-text:    #5cb87a;
+  --shadow:      0 1px 3px rgba(0,0,0,0.3), 0 4px 16px rgba(0,0,0,0.2);
 }
 
-html {
-  scroll-behavior: smooth;
-  font-size: 16px;
-}
+/* ─── Reset ───────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0 }
+
+html { scroll-behavior: smooth; font-size: 16px }
 
 body {
   font-family: var(--font-b);
@@ -59,77 +80,52 @@ body {
   color: var(--text);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  transition: background 0.25s var(--ease), color 0.25s var(--ease);
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+a { color: inherit; text-decoration: none }
+img, svg { display: block; max-width: 100% }
+button { cursor: pointer; border: none; background: none; font: inherit }
+ul, ol { list-style: none }
 
-img, svg {
-  display: block;
-  max-width: 100%;
-}
-
-button {
-  cursor: pointer;
-  border: none;
-  background: none;
-  font: inherit;
-}
-
-ul, ol {
-  list-style: none;
-}
-
-/* typography utilities */
-.font-display { font-family: var(--font-d) }
-.font-mono    { font-family: var(--font-m) }
-
-h1, h2, h3, h4 {
+h1,h2,h3,h4 {
   font-family: var(--font-d);
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.15;
   color: var(--solid);
+  letter-spacing: -0.02em;
 }
 
-/* layout */
+/* ─── Layout ──────────────────────────────────────────── */
 .container {
   width: 100%;
   max-width: 1160px;
   margin-inline: auto;
   padding-inline: var(--sp4);
 }
+@media (min-width: 768px) { .container { padding-inline: var(--sp8) } }
 
-@media (min-width: 768px) {
-  .container { padding-inline: var(--sp8) }
-}
+.section { padding-block: var(--sp16) }
+@media (min-width: 768px) { .section { padding-block: var(--sp20) } }
 
-/* section spacing */
-.section {
-  padding-block: var(--sp16);
-}
+.divider { height: 1px; background: var(--line); border: none }
 
-@media (min-width: 768px) {
-  .section { padding-block: var(--sp20) }
-}
-
-/* tag pill */
+/* ─── Tag pill ────────────────────────────────────────── */
 .tag {
   display: inline-block;
   font-family: var(--font-m);
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 500;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   padding: 3px 10px;
   border-radius: 999px;
   background: var(--tag-bg);
   color: var(--tag-text);
+  border: 1px solid color-mix(in srgb, var(--accent) 20%, transparent);
 }
 
-/* button */
+/* ─── Buttons ─────────────────────────────────────────── */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -139,35 +135,21 @@ h1, h2, h3, h4 {
   font-weight: 500;
   padding: 10px 20px;
   border-radius: var(--r2);
-  transition: background 0.18s var(--ease), color 0.18s var(--ease), border-color 0.18s var(--ease);
+  transition: all 0.18s var(--ease);
+  white-space: nowrap;
 }
-
 .btn-primary {
   background: var(--accent);
   color: #fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.12);
 }
-.btn-primary:hover { background: var(--accent-hover) }
-
+.btn-primary:hover { background: var(--accent2); transform: translateY(-1px) }
 .btn-outline {
   background: transparent;
   color: var(--solid);
-  border: 1px solid var(--line);
+  border: 1px solid var(--line-strong);
 }
-.btn-outline:hover {
-  background: var(--bg2);
-  border-color: rgba(19,32,26,0.22);
-}
+.btn-outline:hover { background: var(--surface); border-color: var(--accent) }
 
-/* divider */
-.divider {
-  height: 1px;
-  background: var(--line);
-  border: none;
-}
-
-/* focus ring */
-:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 3px;
-  border-radius: 3px;
-}
+/* ─── Focus ───────────────────────────────────────────── */
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px }

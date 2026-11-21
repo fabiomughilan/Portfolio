@@ -1,8 +1,6 @@
 export type Category =
-  | 'web3'
   | 'ai'
   | 'fullstack'
-  | 'mobile'
   | 'systems'
 
 export interface Project {
