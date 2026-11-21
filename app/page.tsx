@@ -1,5 +1,6 @@
 import HeroSplit from '@/components/HeroSplit'
 import FeaturedWork from '@/components/FeaturedWork'
+import GitHubRepos from '@/components/GitHubRepos'
 
 const techStack = [
   { area: 'Languages',           items: ['Python', 'TypeScript', 'Java', 'Kotlin', 'JavaScript'] },
@@ -22,6 +23,13 @@ export default function HomePage() {
 
       {/* featured projects */}
       <FeaturedWork />
+
+      <hr className="divider" />
+
+      <hr className="divider" />
+
+      {/* github repos — live from API */}
+      <GitHubRepos />
 
       <hr className="divider" />
 
