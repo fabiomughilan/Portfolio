@@ -31,6 +31,7 @@ export default function HeroCanvas() {
     let particles: P[] = []
 
     function resize() {
+      if (!canvas || !ctx) return
       W = canvas.offsetWidth
       H = canvas.offsetHeight
       canvas.width  = W * devicePixelRatio
@@ -52,6 +53,7 @@ export default function HeroCanvas() {
 
     function draw() {
       raf = requestAnimationFrame(draw)
+      if (!ctx) return
       ctx.clearRect(0, 0, W, H)
 
       const col = getAccent()
